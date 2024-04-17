@@ -1,0 +1,121 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ */
+package com.mycompany.metatraderbrokeradmin.orderndeals;
+
+import java.awt.BorderLayout;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+//
+
+/**
+ *
+ * @author techninza
+ */
+public class JournalPanel extends javax.swing.JPanel {
+
+    /**
+     * Creates new form JournalPanel
+     */
+    public JournalPanel() {
+        initComponents();
+        tabledata();
+    }
+
+    public JournalPanel(JSONArray journalDetails) {
+        initComponents();
+        tabledata(journalDetails);
+    }
+
+    private void tabledata(JSONArray journalDetails) {
+
+        DefaultTableModel tableModel = new DefaultTableModel();
+        // Create the column names for the table
+        String[] columnNames = {"Time", "Server", "Message"};
+        for (String columnName : columnNames) {
+            tableModel.addColumn(columnName);
+        }
+        try {
+
+            for (int i = 0; i < journalDetails.length(); i++) {
+                JSONObject jso = journalDetails.getJSONObject(i);
+                String message = jso.getString("message");
+                String time = jso.getString("time");
+                String[] rowData = {time, "", message};
+                tableModel.addRow(rowData);
+            }
+        } catch (JSONException ex) {
+            System.out.println("exception occurred in joutrnal panel  of order deals popup");
+            System.out.println("Exception message: " + ex.getMessage());
+        }
+        JTable jTable1 = new JTable(tableModel);
+        setLayout(new BorderLayout());
+        JScrollPane scrollPane = new JScrollPane(jTable1);
+        add(scrollPane, BorderLayout.CENTER);
+    }
+    // static one
+
+    private void tabledata() {
+        Object[][] data = {
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': scanning network finished "},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': scanning network finished "},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': scanning network finished "},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': access point 'Access Server' (ip address)"},
+            {"2023.11.25 12:37:29.245", "ArenaCapitals-Live", "'707099': scanning network finished "},};
+
+        // Create the column names for the table
+        String[] columnNames = {"Time", "Server", "Message"};
+
+        // Create the table model
+        DefaultTableModel tableModel = new DefaultTableModel(data, columnNames);
+
+        JTable jTable1 = new JTable(tableModel);
+        setLayout(new BorderLayout());
+        JScrollPane scrollPane = new JScrollPane(jTable1);
+        add(scrollPane, BorderLayout.CENTER);
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // End of variables declaration//GEN-END:variables
+}

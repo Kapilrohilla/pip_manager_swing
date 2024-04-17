@@ -1,0 +1,393 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ */
+package com.mycompany.managerapp.AccountDetails;
+
+import com.mycompany.managerapp.Utility.APIs;
+import com.mycompany.managerapp.AccountDetails.GroupSymbolpopup.PopupTree4Group;
+import com.mycompany.managerapp.ManagerApp;
+import com.mycompany.managerapp.TradingAccountTable;
+
+import java.awt.Color;
+import java.io.IOException;
+import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JColorChooser;
+import javax.swing.JOptionPane;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/**
+ *
+ * @author Kapil
+ */
+public class Account extends javax.swing.JPanel {
+
+    /**
+     * Creates new form Account
+     */
+    String uid;
+    ArrayList<JSONObject> arraylist = new ArrayList<>();
+    public static String groupid = "";
+
+    public Account() {
+        initComponents();
+        jComboBox3.setEditable(true);
+    }
+
+    final void update(String gId, String color, String leverage, String bankAccount, String agentAccount, boolean enableAccountFlag, boolean enableChangePswdFlag, boolean enableOtp, boolean changePswd, String tradeAccounts) throws IOException {
+        String apiUrl = APIs.UPDATE_USER;
+
+        JSONObject jsnObj = new JSONObject();
+        try {
+
+            jsnObj.put("userId", uid);
+            jsnObj.put("group", groupid);
+//            jsnObj.put("", color);
+            jsnObj.put("leverage", leverage.split(":")[1]);
+//            jsnObj.put("", bankAccount);
+//            jsnObj.put("", agentAccount);
+            jsnObj.put("status", enableAccountFlag);
+//            jsnObj.put("", enableChangePswdFlag);
+//            jsnObj.put("", enableOtp);
+//            jsnObj.put("", changePswd);
+//            jsnObj.put("", tradeAccounts);
+
+        } catch (JSONException ex) {
+            System.out.println("Exception occurred in account panel while adding fields to jsonobj for body :  " + ex.getMessage());
+        }
+        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+        RequestBody body = RequestBody.create(JSON, jsnObj.toString());
+
+        Request request = new Request.Builder()
+                .url(apiUrl)
+                .post(body)
+                .build();
+
+        OkHttpClient client = new OkHttpClient();
+        Response response = client.newCall(request).execute();
+
+        // Check for successful response
+        if (response.isSuccessful()) {
+            // Get response body as strings
+            JOptionPane.showMessageDialog(this, "Account Updated");
+            String responseBody = response.body().string();
+            ManagerApp.jSplitPane.setRightComponent(new TradingAccountTable());
+//            System.out.println("_____________________*****************_________________");
+//            System.out.println(responseBody);
+//            System.out.println("_____________________*****************_________________");
+        } else {
+            // Handle error
+            System.out.println("code: " + response.code());
+            System.out.println("Error: " + response.body().toString());
+        }
+
+    }
+
+    public Account(JSONArray jsa, String personGroupId, String userId, boolean isAccountEnabled, String groupname, JSONObject data4leverage) {
+        initComponents();
+        this.uid = userId;
+        this.groupid = personGroupId;
+        jComboBox3.setEditable(true);
+        jLabel7.setText(groupname);
+        // System.out.println("data4leverage: " + data4leverage);
+        try {
+            String leverage = data4leverage.getString("leverage");
+
+            String leverage2set = "1:" + leverage;
+            jComboBox3.setSelectedItem(leverage2set);
+
+        } catch (JSONException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        DefaultComboBoxModel<String> groupComboBox = new DefaultComboBoxModel<>();
+        jCheckBox1.setSelected(isAccountEnabled);
+        for (int i = 0; i < jsa.length(); i++) {
+            try {
+                JSONObject jsonobject = jsa.getJSONObject(i);
+                String name = jsonobject.getString("Name");
+                String groupId = jsonobject.getString("_id");
+                groupComboBox.addElement(name);
+                String[] arr = {name, groupId};
+                System.out.println("jsonobject: " + jsonobject);
+                arraylist.add(jsonobject);
+            } catch (JSONException ex) {
+            }
+            // jComboBox1.setModel(groupComboBox);
+        }
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
+
+        jLabel1.setText("Group:");
+
+        jLabel2.setText("Color:");
+
+        jLabel3.setText("Bank Account:");
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1:5000", "1:1000", "1:500", "1:100", "1:10", "1:1", " " }));
+
+        jLabel4.setText("Leverage:");
+
+        jLabel5.setText("Agent account:");
+
+        jCheckBox1.setText("Enable this account");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox2.setText("Enable to change password");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox3.setText("Enable one-time password");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox4.setText("Change password at next login");
+        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox4ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Ok");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Color");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Selected Group");
+
+        jButton8.setText("Select group");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(jButton7)
+                                .addGap(4, 4, 4)
+                                .addComponent(jButton6)
+                                .addGap(80, 80, 80)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton8))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(4, 4, 4)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(49, 49, 49)
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(72, 72, 72)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBox4)
+                                    .addComponent(jCheckBox3)
+                                    .addComponent(jCheckBox2)
+                                    .addComponent(jCheckBox1)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(109, 109, 109)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel7)
+                    .addComponent(jButton8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4)
+                        .addComponent(jButton6)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox4)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox4ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        try {
+
+            String selectedGroup = jLabel7.getText();
+
+            String leverage = jComboBox3.getSelectedItem() + "";
+            String bankAccount = jTextField1.getText();
+            String agentAccout = jTextField2.getText();
+            boolean enableAccountFlag = jCheckBox1.isSelected();
+            boolean enableChangePswdFlag = jCheckBox2.isSelected();
+            boolean enableOtp = jCheckBox3.isSelected();
+            boolean changePswd = jCheckBox4.isSelected();
+            String tradeAccounts = "";
+            String groupId = "";
+            System.out.println("groupID: " + groupId);
+
+            try {
+                update(groupId, "", leverage, bankAccount, agentAccout, enableAccountFlag, enableChangePswdFlag, enableOtp, changePswd, tradeAccounts);
+            } catch (IOException ex) {
+                System.out.println("exception occureed during update IOException");
+                System.out.println(ex.getMessage());
+            }
+        } catch (Exception ex) {
+            System.out.println("Exception occurred in account panel ");
+            System.out.println("Exception message " + ex.getMessage());
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Color initialcolor = Color.RED;
+        System.out.println("called ");
+        Color color = JColorChooser.showDialog(this, "Select a color", initialcolor);
+        System.out.println("color: " + color.hashCode());
+        // jButton1.setBackground(color);
+        jButton7.setBackground(color);
+        jButton7.setForeground(color);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        try {
+            new PopupTree4Group("Account").setVisible(true);
+        } catch (JSONException ex) {
+            System.out.println("exception occurred while fething group details in PopupTree4Group: " + ex.getMessage());
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    public static javax.swing.JLabel jLabel7;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    // End of variables declaration//GEN-END:variables
+}

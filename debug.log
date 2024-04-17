@@ -1,0 +1,151 @@
+[0214/125715.530:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0214/125736.551:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0214/125757.880:INFO:CONSOLE(58)] "Error fetching data: TypeError: Failed to fetch", source: http://3.111.211.154:8080/visualize?orderId=65cb46d66feb027af95aa37f (58)
+[0214/125757.880:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://3.111.211.154:8080/visualize?orderId=65cb46d66feb027af95aa37f (180)
+[0214/130215.654:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0214/130236.914:INFO:CONSOLE(58)] "Error fetching data: TypeError: Failed to fetch", source: http://3.111.211.154:8080/visualize?orderId=65cb46d66feb027af95aa37f (58)
+[0214/130236.920:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://3.111.211.154:8080/visualize?orderId=65cb46d66feb027af95aa37f (180)
+[0214/130422.087:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0214/130443.616:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0214/130504.885:INFO:CONSOLE(58)] "Error fetching data: TypeError: Failed to fetch", source: http://3.111.211.154:8080/visualize?orderId=65cb46d66feb027af95aa37f (58)
+[0214/130504.885:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://3.111.211.154:8080/visualize?orderId=65cb46d66feb027af95aa37f (180)
+[0214/130717.621:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0214/130728.746:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0214/130750.039:INFO:CONSOLE(58)] "Error fetching data: TypeError: Failed to fetch", source: http://3.111.211.154:8080/visualize?orderId=65cb46d66feb027af95aa37f (58)
+[0214/130750.039:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://3.111.211.154:8080/visualize?orderId=65cb46d66feb027af95aa37f (180)
+[0214/130922.570:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0214/170240.060:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0215/114832.047:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0215/114840.167:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0215/114844.248:INFO:CONSOLE(13)] "Uncaught Error: Value is null", source: https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.min.js (13)
+[0215/114844.255:INFO:CONSOLE(13)] "Uncaught Error: Value is null", source: https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.min.js (13)
+[0215/115503.317:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0222/111557.993:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0222/111614.434:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0222/111614.996:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://3.111.211.154:8080/visualize?orderId=65d5f31678b5704e89090348 (180)
+[0227/122745.608:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/131842.027:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/132641.442:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0227/132643.748:INFO:CONSOLE(13)] "Uncaught Error: Value is null", source: https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.min.js (13)
+[0227/135253.280:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/141426.061:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/150244.436:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/150452.033:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/150704.066:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/150829.874:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/151207.122:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/151538.377:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/151831.532:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/152144.945:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/152508.007:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/152715.065:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/153432.327:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0227/160217.201:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0228/020626.620:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0302/171636.023:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0302/171655.582:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0302/171657.834:INFO:CONSOLE(13)] "Uncaught Error: Value is null", source: https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.min.js (13)
+[0302/171855.968:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0302/171901.816:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0302/171904.282:INFO:CONSOLE(13)] "Uncaught Error: Value is null", source: https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.min.js (13)
+[0307/193758.964:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0307/193804.535:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0307/193806.611:INFO:CONSOLE(13)] "Uncaught Error: Value is null", source: https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.min.js (13)
+[0314/173047.167:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0314/173051.606:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0314/181910.387:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0314/184030.604:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/184030.609:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/184035.631:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/184035.633:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/184045.652:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/184045.652:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/184105.657:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/184105.683:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/184842.030:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/184842.035:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/190321.694:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/190321.699:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/190326.706:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/190326.721:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/190336.725:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/190336.740:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/190356.742:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/190356.757:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/191111.678:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0314/191111.680:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0322/185545.351:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0322/190500.884:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0322/190555.552:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0322/191309.977:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0322/191310.469:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://3.111.211.154:8080/visualize?orderId=65fd838a0ce84bbfc2c2c989 (180)
+[0323/133520.532:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0323/164611.731:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0326/114907.099:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0326/121603.682:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0326/121743.380:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0326/122607.366:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0326/122850.652:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0326/123120.845:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0326/123851.548:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0326/134026.080:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0328/131323.215:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0328/134848.963:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0328/135143.033:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0328/135526.422:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0328/135529.756:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0328/135543.263:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0328/140218.137:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0328/145759.214:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0328/150615.415:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0328/152157.534:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0328/152752.415:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0328/155917.356:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0401/121040.835:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0401/121043.902:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0401/121045.652:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://35.154.68.218:8080/visualize?orderId=660a5648ae0fb7797d3afde0 (180)
+[0401/122441.864:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/120705.104:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/120735.469:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0402/120735.992:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://35.154.68.218:8080/visualize?orderId=6603cfc4acdc8a07f76c5995 (180)
+[0402/120744.276:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0402/121904.661:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/122416.088:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/123551.980:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/123551.982:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/124056.283:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/124056.283:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/125349.396:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/125357.703:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0402/125358.045:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://35.154.68.218:8080/visualize?orderId=6603cfc4acdc8a07f76c5995 (180)
+[0402/130345.881:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/132041.244:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/132312.270:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/132927.812:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/132927.820:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/132950.323:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/132950.330:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/134847.376:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/134847.388:WARNING:dns_config_service_win.cc(583)] Failed to read DnsConfig.
+[0402/150710.412:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/150945.462:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0402/150946.780:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://35.154.68.218:8080/visualize?orderId=6603cfc4acdc8a07f76c5995 (180)
+[0402/151237.545:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0402/185150.056:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0403/112113.543:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0403/112121.719:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0403/112122.070:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://35.154.68.218:8080/visualize?orderId=6603cfc4acdc8a07f76c5995 (180)
+[0403/114807.681:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0403/114809.958:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0403/114811.609:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://35.154.68.218:8080/visualize?orderId=6603cfc4acdc8a07f76c5995 (180)
+[0403/115016.702:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0403/115057.479:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0403/115058.071:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://35.154.68.218:8080/visualize?orderId=660ceb0724803a43d7260ad2 (180)
+[0403/130402.017:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0403/133220.087:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0403/135331.698:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0403/135529.135:WARNING:dxgi_swap_chain_image_backing.cc(205)] First draw to surface should draw to everything
+[0403/135529.574:INFO:CONSOLE(180)] "No data retrieved from the API.", source: http://35.154.68.218:8080/visualize?orderId=660569c16834efa6ed74ab82 (180)
+[0403/143029.790:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0403/152608.259:WARNING:chrome_browser_cloud_management_controller.cc(88)] Could not create policy manager as CBCM is not enabled.
+[0403/152708.371:WARNING:spdy_session.cc(3198)] Received HEADERS for invalid stream 7
